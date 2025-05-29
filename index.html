@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SehatPlus - Layanan Kesehatan Digital</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-heartbeat"></i> SehatPlus</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#diagnosa">Diagnosa</a></li>
+                    <li><a href="#rs-terdekat">RS Terdekat</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="home">
+            <h2>Selamat Datang di SehatPlus</h2>
+            <p>Layanan kesehatan digital untuk membantu Anda menemukan rumah sakit terdekat dan melakukan diagnosa awal gejala penyakit.</p>
+            <div class="cta-buttons">
+                <a href="#diagnosa" class="btn">Diagnosa Sekarang</a>
+                <a href="#rs-terdekat" class="btn btn-secondary">Cari RS Terdekat</a>
+            </div>
+        </section>
+
+        <section id="diagnosa">
+            <h2><i class="fas fa-stethoscope"></i> Diagnosa Penyakit</h2>
+            <div class="diagnosa-form">
+                <div class="input-group">
+                    <label for="gejala">Masukkan gejala yang Anda alami:</label>
+                    <textarea id="gejala" placeholder="Contoh: demam, sakit kepala, mual..."></textarea>
+                </div>
+                <button id="diagnosa-btn" class="btn">Proses Diagnosa</button>
+                <div id="hasil-diagnosa" class="hasil-diagnosa">
+                    <!-- Hasil diagnosa akan muncul di sini -->
+                </div>
+            </div>
+        </section>
+
+        <section id="rs-terdekat">
+            <h2><i class="fas fa-hospital"></i> Rumah Sakit Terdekat</h2>
+            <div class="map-container">
+                <div id="map"></div>
+                <div class="map-controls">
+                    <button id="cari-rs" class="btn">Cari RS Terdekat</button>
+                    <div id="rs-list" class="rs-list">
+                        <!-- Daftar RS akan muncul di sini -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 SehatPlus - Layanan Kesehatan Digital</p>
+        </div>
+    </footer>
+
+    <!-- Load Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+    <script src="script.js"></script>
+</body>
+</html>
